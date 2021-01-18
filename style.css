@@ -14,9 +14,6 @@ h1 {
   user-select: none;
 }
 
-.nextButton {
-  z-index: 0;
-}
 
 h2 {
   background-color: lightpink;
@@ -36,13 +33,33 @@ h3 {
   margin-top: 0px;
   font-size: 25px;
 }
-.button {
+
+.nextButton {
   background-color: LightBlue;
   border-color: Gray;
   border: 2px solid;
   color: Black;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
+  border-radius: 20px;
+  position: relative;
+  width: 48%;
+  bottom: -4px;
+  outline: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.buttonClass {
+  background-color: LightBlue;
+  border-color: Gray;
+  border: 2px solid;
+  color: Black;
+  text-align: center;
+  font-size: 40px;
   border-radius: 20px;
   position: relative;
   width: 48%;
@@ -105,7 +122,7 @@ h3 {
 
 .statsDiv {
   width: 100%;
-  height: 40vh;
+  height: 32vh;
   border-color: coral;
   border-style: solid;
   text-align: center;
