@@ -1,9 +1,21 @@
 body {
   background-color: grey;
 }
-h1 {
+.mainText {
   margin-top: 0px;
-  height: 8vh;
+  height: 7vh;
+  text-align: center;   
+  background-color: lightpink;
+  border-radius: 20px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.secondText {
+  margin-top: 0px;
+  height: 5vh;
   text-align: center;   
   background-color: lightpink;
   border-radius: 20px;
@@ -14,8 +26,8 @@ h1 {
   user-select: none;
 }
 
-
 h2 {
+  position: relative;
   background-color: lightpink;
   margin-top: 0px;
   color: Black;
@@ -26,6 +38,7 @@ h2 {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  bottom: 15px;
 }
 h3 {
   position: relative;
@@ -44,7 +57,7 @@ h3 {
   border-radius: 20px;
   position: relative;
   width: 48%;
-  bottom: -4px;
+  bottom: -.5vh;
   outline: none;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -74,7 +87,7 @@ h3 {
 .mainDiv {
   background-color: pink;
   width: 29%;
-  height: 28vh;
+  height: 25vh;
   border-color: coral;
   border-style: solid;
   text-align: center;
