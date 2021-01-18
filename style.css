@@ -17,7 +17,6 @@ body {
   margin-top: 0px;
   height: 5vh;
   text-align: center;   
-  background-color: lightpink;
   border-radius: 20px;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -28,9 +27,9 @@ body {
 
 h2 {
   position: relative;
-  background-color: lightpink;
   margin-top: 0px;
-  color: Black;
+  color: red;
+  text-shadow: 1px 1px black, -1px -1px black;
   text-align: center;
   font-size: 50px;
   -moz-user-select: -moz-none;
@@ -85,7 +84,43 @@ h3 {
   user-select: none;
 }
 .mainDiv {
-  background-color: pink;
+  background-image: url('Farmer.jpg');
+  background-size: cover;
+  width: 29%;
+  height: 20vh;
+  border-color: coral;
+  border-style: solid;
+  text-align: center;
+  border-radius: 20px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  float:left;
+  margin-left: 2.25%;
+}
+.mainDiv2 {
+  background-color: red;
+  background-image: url('warrior.png');
+  background-size: cover;
+  width: 29%;
+  height: 20vh;
+  border-color: coral;
+  border-style: solid;
+  text-align: center;
+  border-radius: 20px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  float:left;
+  margin-left: 2.25%;
+}
+.mainDiv3 {
+  background-image: url('doctor.jpg');
+  background-size: cover;
   width: 29%;
   height: 20vh;
   border-color: coral;
