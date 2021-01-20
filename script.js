@@ -6,7 +6,7 @@ let guardStat = document.getElementById("guardStat")
 let doctorStat = document.getElementById("doctorStat")
 let nojobStat = document.getElementById("nojobStat")
 let nextButton = document.getElementById("nextButton")
-let yearDisplay = document.getElementById("year")
+let yearDisplay = document.getElementById("yearDisplay")
 let populationDisplay = document.getElementById
 ("population")
 let yearStatsDiv = document.getElementById("yearStatsDiv")
@@ -22,6 +22,13 @@ let population = 430
 let foodEfficiency = 2.5
 let guardEfficiency = 4
 let doctorEfficiency = 3.5
+
+//var image = document.getElementById('mainDiv');
+//image.style.backgroundImage = "url('Farmer.jpg')";
+//image.style.height = 'auto';
+//var image3 = document.getElementById('mainDiv3');
+//image3.style.backgroundImage = "url('Doctor.png')";
+//image3.style.height = 'auto';
 
 function farmer(add) {
   if (numFarmers + add >= 0) {
