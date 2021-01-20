@@ -28,8 +28,8 @@ body {
 h2 {
   position: relative;
   margin-top: 0px;
-  color: red;
-  text-shadow: 1px 1px black, -1px -1px black;
+  color: black;
+  background: rgba(255, 255, 255, .5);
   text-align: center;
   font-size: 50px;
   -moz-user-select: -moz-none;
