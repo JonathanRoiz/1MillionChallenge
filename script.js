@@ -23,12 +23,15 @@ let foodEfficiency = 2.5
 let guardEfficiency = 4
 let doctorEfficiency = 3.5
 
-//var image = document.getElementById('mainDiv');
-//image.style.backgroundImage = "url('Farmer.jpg')";
-//image.style.height = 'auto';
-//var image3 = document.getElementById('mainDiv3');
-//image3.style.backgroundImage = "url('Doctor.png')";
-//image3.style.height = 'auto';
+let lostDiv = document.getElementById("lostDiv")
+let winDiv = document.getElementById("winDiv")
+let event = document.getElementById("event")
+let stats = document.getElementById("stats")
+let title = document.getElementById("title")
+let mainDiv = document.getElementById("mainDiv")
+let mainDiv2 = document.getElementById("mainDiv2")
+let mainDiv3 = document.getElementById("mainDiv3")
+lostDiv.style.display = "none"
 
 function farmer(add) {
   if (numFarmers + add >= 0) {
@@ -89,13 +92,6 @@ function setDefault() {
   window.setTimeout(setDebounce, 500);
 }
 
-let roles = [
-  "Guards",
-  "Farmers",
-  "Doctors",
-  "NoJob",
-];
-//roles[Math.floor(Math.random()*4)]
 function nextYear() {
   if (debounce) {
     debounce = false
@@ -128,7 +124,15 @@ function nextYear() {
     yearStatsDiv.style.display = "block";
     populationDisplay.innerHTML = "Population: "+population+" Milion"
     if (population <= 0) {
-      alert('You Lost!');
+      event.style.display = "none";
+      stats.style.display = "none";
+      title.style.display = "none";
+      mainDiv.style.display = "none";
+      mainDiv2.style.display = "none";
+      mainDiv3.style.display = "none";
+      nextButton.style.display = "none";
+      yearStatsDiv.style.display = "none";
+      lostDiv.style.display = "block";
     }
     if (population-numFarmers-numGuards-numDoctors >= 0) {
       numNoJob = population-numFarmers-numGuards-numDoctors
@@ -142,27 +146,57 @@ function nextYear() {
       foodEfficiency = 2
     }
     if (year == 1880) {
-      eventNews.innerHTML = "The Northern Chinese Famine of 1876–1879 is finally over! Many people have died, but you have managed to save China!";
+      winDiv.style.display = "block";
       foodEfficiency = 2.5
     }
-    if (numDoctors*doctorEfficiency-population <= 0) {
-      doctorStat.innerHTML = "Health: "+Math.floor(numDoctors*doctorEfficiency-population)+'m Population';
-    } else {
-      doctorStat.innerHTML = "Health: -0m Population";
-    }
-
-    if (numGuards*guardEfficiency-population <= 0) {
-      guardStat.innerHTML = "Defense: "+Math.floor(numGuards*guardEfficiency-population)+'m Population';
-    } else {
-      guardStat.innerHTML = "Defense: -0m Population";
-    }
-    if (numFarmers*foodEfficiency-population > 0) {
-      foodStat.innerHTML = "Food Production: +"+Math.floor(numFarmers*foodEfficiency-population)+'m Population';
-    } else {
-      foodStat.innerHTML = "Food Production: "+Math.floor(numFarmers*foodEfficiency-population)+'m Population';
-    }
-    nojobStat.innerHTML = "No Job: "+numNoJob+"m";
+    updateStats()
   }
+}
+
+function updateStats() {
+  if (numDoctors*doctorEfficiency-population <= 0) {
+    doctorStat.innerHTML = "Health: "+Math.floor(numDoctors*doctorEfficiency-population)+'m Population';
+  } else {
+    doctorStat.innerHTML = "Health: -0m Population";
+  }
+
+  if (numGuards*guardEfficiency-population <= 0) {
+    guardStat.innerHTML = "Defense: "+Math.floor(numGuards*guardEfficiency-population)+'m Population';
+  } else {
+    guardStat.innerHTML = "Defense: -0m Population";
+  }
+
+  if (numFarmers*foodEfficiency-population > 0) {
+    foodStat.innerHTML = "Food Production: +"+Math.floor(numFarmers*foodEfficiency-population)+'m Population';
+  } else {
+    foodStat.innerHTML = "Food Production: "+Math.floor(numFarmers*foodEfficiency-population)+'m Population';
+  }
+  nojobStat.innerHTML = "No Job: "+numNoJob+"m";
+  populationDisplay.innerHTML = "Population: " + population + " Million";
+}
+
+function reset() {
+  population = 430
+  numFarmers = 0
+  numGuards = 0
+  numDoctors = 0
+  numNoJob = 430
+  year = 1874
+  foodEfficiency = 2.5
+  guardEfficiency = 4
+  doctorEfficiency = 3.5
+  nextButton.innerHTML = "Next Year";
+  eventNews.innerHTML = "None";
+  updateStats()
+  event.style.display = "block";
+  stats.style.display = "block";
+  title.style.display = "block";
+  mainDiv.style.display = "block";
+  mainDiv2.style.display = "block";
+  mainDiv3.style.display = "block";
+  nextButton.style.display = "block";
+  yearStatsDiv.style.display = "none";
+  lostDiv.style.display = "none";
 }
 
 function exit() {
