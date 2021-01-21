@@ -146,7 +146,7 @@ function nextYear() {
       eventNews.innerHTML = "Their has been a drought in the Yellow River basin area. This caused many of North China's crops to fail. The Chinese government gave Shanxi, Henan, Shaanxi, and Zhili over 18 million taels ($2,916,553) of tax remissions over the course of the 3 years which the famine lasted. That was more than 1/5th of one years receipts of the imperial treasury. Despite this, an estimated 9.5 to 13 million people died in Northern China. This disaster is referred to as 'Dīngwù Qíhuāng' in China, or 'The Northern Chinese Famine of 1876–1879' in other countries. (-20% food production)";
       foodEfficiency = 2
     }
-    if (year == 1880) {
+    if (year == 1879) {
       event.style.display = "none";
       stats.style.display = "none";
       title.style.display = "none";
