@@ -32,6 +32,7 @@ let mainDiv = document.getElementById("mainDiv")
 let mainDiv2 = document.getElementById("mainDiv2")
 let mainDiv3 = document.getElementById("mainDiv3")
 lostDiv.style.display = "none"
+winDiv.style.display = "none"
 
 function farmer(add) {
   if (numFarmers + add >= 0) {
