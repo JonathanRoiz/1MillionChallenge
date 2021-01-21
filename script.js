@@ -147,6 +147,14 @@ function nextYear() {
       foodEfficiency = 2
     }
     if (year == 1880) {
+      event.style.display = "none";
+      stats.style.display = "none";
+      title.style.display = "none";
+      mainDiv.style.display = "none";
+      mainDiv2.style.display = "none";
+      mainDiv3.style.display = "none";
+      nextButton.style.display = "none";
+      yearStatsDiv.style.display = "none";
       winDiv.style.display = "block";
       foodEfficiency = 2.5
     }
