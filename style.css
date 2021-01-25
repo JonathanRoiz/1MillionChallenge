@@ -194,7 +194,7 @@ h3 {
   top: 20vh;
   border-color: coral;
   border-style: solid;
-  background-color: pink;
+  background-color: rgb(255, 95, 95);
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -233,7 +233,7 @@ h3 {
   border-style: solid;
   text-align: center;
   border-radius: 20px;
-  background-color: pink;
+  background-color: rgb(255, 95, 95);
   margin-bottom: 5px;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -249,7 +249,7 @@ h3 {
   position: relative;
   top: 0px;
   text-align: center;
-  background-color: lightpink;
+  background-color: rgb(255, 83, 83);
   border-radius: 20px;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -275,4 +275,13 @@ h3 {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.displays {
+  background-color: rgb(255, 83, 83);
+}
+
+.Header {
+  border-radius: 20px;
+  background-color: rgb(241, 255, 159)
 }
