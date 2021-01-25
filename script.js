@@ -121,9 +121,9 @@ function nextYear() {
       peopleDied = peopleDied + peopleBorn
       population = population + peopleDied;
     }
-    deathDisplay.innerHTML = -peopleDied+"m people died"
+    deathDisplay.innerHTML = -Math.floor(peopleDied)+"m people died"
     yearStatsDiv.style.display = "block";
-    populationDisplay.innerHTML = "Population: "+population+" Milion"
+    populationDisplay.innerHTML = "Population: "+Math.floor(population)+" Milion"
     if (population <= 0) {
       event.style.display = "none";
       stats.style.display = "none";
@@ -143,10 +143,18 @@ function nextYear() {
       numNoJob = 0
     }
     if (year == 1876) {
-      eventNews.innerHTML = "Their has been a drought in the Yellow River basin area. This caused many of North China's crops to fail. The Chinese government gave Shanxi, Henan, Shaanxi, and Zhili over 18 million taels ($2,916,553) of tax remissions over the course of the 3 years which the famine lasted. That was more than 1/5th of one years receipts of the imperial treasury. Despite this, an estimated 9.5 to 13 million people died in Northern China. This disaster is referred to as 'Dīngwù Qíhuāng' in China, or 'The Northern Chinese Famine of 1876–1879' in other countries. (-20% food production)";
+      eventNews.innerHTML = "Their has been a drought in the Yellow River basin area. This caused many of North China's crops to fail. This disaster is referred to as 'Dīngwù Qíhuāng' in China, or 'The Northern Chinese Famine of 1876–1879' in other countries. (-20% food production)";
       foodEfficiency = 2
     }
+    if (year == 1877) {
+      eventNews.innerHTML = "In 1877, the drought worsened dramaticly with an almost complete failure of rain. Even more of China's crops failed this year. (-30% food production)";
+      foodEfficiency = 1.75
+    }
     if (year == 1879) {
+      eventNews.innerHTML = "By 1879, the conditions began to stabilize. An estimated 9.5 to 13 million people died in Northern China from the famine. The Chinese government gave Shanxi, Henan, Shaanxi, and Zhili over 18 million taels ($2,916,553) of tax remissions over the course of the 3 years which the famine lasted. That was more than 1/5th of one years receipts of the imperial treasury. (-10% food production)";
+      foodEfficiency = 2.25
+    }
+    if (year == 1880) {
       event.style.display = "none";
       stats.style.display = "none";
       title.style.display = "none";
@@ -181,7 +189,7 @@ function updateStats() {
     foodStat.innerHTML = "Food Production: "+Math.floor(numFarmers*foodEfficiency-population)+'m Population';
   }
   nojobStat.innerHTML = "No Job: "+numNoJob+"m";
-  populationDisplay.innerHTML = "Population: " + population + " Million";
+  populationDisplay.innerHTML = "Population: " + math.floor(population) + " Million";
 }
 
 function reset() {
@@ -210,4 +218,18 @@ function reset() {
 
 function exit() {
   yearStatsDiv.style.display = "none";
+}
+
+function continueFunction() {
+  yearStatsDiv.style.display = "none";
+  event.style.display = "block";
+  stats.style.display = "block";
+  title.style.display = "block";
+  mainDiv.style.display = "block";
+  mainDiv2.style.display = "block";
+  mainDiv3.style.display = "block";
+  nextButton.style.display = "block";
+  yearStatsDiv.style.display = "none";
+  lostDiv.style.display = "none";
+  winDiv.style.display = "none";
 }
