@@ -188,8 +188,8 @@ function updateStats() {
   } else {
     foodStat.innerHTML = "Food Production: "+Math.floor(numFarmers*foodEfficiency-population)+'m Population';
   }
-  nojobStat.innerHTML = "No Job: "+numNoJob+"m";
-  populationDisplay.innerHTML = "Population: " + math.floor(population) + " Million";
+  nojobStat.innerHTML = "No Job: "+Math.floor(numNoJob)+"m";
+  populationDisplay.innerHTML = "Population: " + Math.floor(population) + " Million";
 }
 
 function reset() {
