@@ -42,7 +42,7 @@ function farmer(add) {
     }
   }
   nojobStat.innerHTML = "No Job: "+numNoJob+"m";
-  farmerDisplay.innerHTML = numFarmers + 'm';
+  farmerDisplay.innerHTML = Math.floor(numFarmers) + 'm';
   if (numFarmers*foodEfficiency-population > 0) {
     foodStat.innerHTML = "Food Production: +"+Math.floor(numFarmers*foodEfficiency-population)+'m Population';
   } else {
@@ -57,8 +57,8 @@ function guard(add) {
       numGuards += add;
     }
   }
-  nojobStat.innerHTML = "No Job: "+numNoJob+"m"
-  guardDisplay.innerHTML = numGuards + 'm';
+  nojobStat.innerHTML = "No Job: "+Math.floor(numNoJob)+"m"
+  guardDisplay.innerHTML = Math.floor(numGuards) + 'm';
   if (numGuards*guardEfficiency-population <= 0) {
     guardStat.innerHTML = "Defense: "+Math.floor(numGuards*guardEfficiency-population)+'m Population';
   } else {
@@ -73,8 +73,8 @@ function doctor(add) {
       numDoctors += add;
     }
   }
-  nojobStat.innerHTML = "No Job: "+numNoJob+"m"
-  doctorDisplay.innerHTML = numDoctors + 'm';
+  nojobStat.innerHTML = "No Job: "+Math.floor(numNoJob)+"m"
+  doctorDisplay.innerHTML = Math.floor(numDoctors) + 'm';
   if (numDoctors*doctorEfficiency-population < 0) {
     doctorStat.innerHTML = "Health: "+Math.floor(numDoctors*doctorEfficiency-population)+'m Population';
   } else {
