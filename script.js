@@ -190,6 +190,7 @@ function updateStats() {
   }
   nojobStat.innerHTML = "No Job: "+Math.floor(numNoJob)+"m";
   populationDisplay.innerHTML = "Population: " + Math.floor(population) + " Million";
+  farmerDisplay.innerHTML = Math.floor(numFarmers) + 'm';
 }
 
 function reset() {
